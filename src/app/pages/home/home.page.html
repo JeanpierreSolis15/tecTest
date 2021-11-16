@@ -1,0 +1,22 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Home</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-list-header>
+        <h3>Productos Escaneados</h3>
+    </ion-list-header>
+    <ion-item *ngFor="let data of userList">
+      <ion-label>{{data.NOMBRE_PRODUCTO}}</ion-label>
+    </ion-item>
+  </ion-list>
+  <ion-button (click)="onQRRead()" expand="full" fill="outline">Escanear Producto</ion-button>
+
+  <p>¿Ubicacion del producto QR?</p>
+  <div id="map-container">
+    <div id="map"></div>
+  </div>
+</ion-content>
